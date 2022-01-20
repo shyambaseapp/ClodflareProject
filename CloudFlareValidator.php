@@ -3,16 +3,17 @@
 require_once __DIR__ . '/CloudFlareApiClass.php';
 
 $github_owner = 'shyambaseapp';
-$git_auth_key =  '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';
+$git_auth_key =  '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';
 $path = '/home/shyam/Documents/WFH/alpha-master/';
 $repo_name = 'alpha';
 $repo_branch = 'master';
 $git_comment = 'first';
 $account_id = '8114ba045157bde928fececeea54e20a';
 $X_Auth_Email = 'shyam.baseapp@gmail.com';
-$X_Auth_Key = '44f3e5d3f277d7c73ccd4ea64c5c78358b367';
-$project_name = 'betaalpha';
+$X_Auth_Key = '51eae388145710e118fb909bc5f3d3957340c';
+$project_name = 'beta';
 $domain = 'dzzled.com';
+$zone_id = '9b0b381cf8c33959be4e88dc12249ab3';
 
 $cf = new CloudFlare();
 // Create github repositories...
@@ -51,6 +52,12 @@ try {
 try {
     $cf->addCloudFlareDomain($account_id, $X_Auth_Email, $X_Auth_Key, $domain);
     echo "domain added---";
+} catch (Exception $e) {
+    echo 'Message: ' . $e->getMessage();
+}
+
+try {
+    $cf->zoneAnalytics($X_Auth_Email, $X_Auth_Key, $zone_id);
 } catch (Exception $e) {
     echo 'Message: ' . $e->getMessage();
 }

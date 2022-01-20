@@ -56,7 +56,6 @@ class ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b
         'C' => 
         array (
             'Clue\\StreamFilter\\' => 18,
-            'Cloudflare\\API\\' => 15,
         ),
     );
 
@@ -147,20 +146,6 @@ class ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b
         array (
             0 => __DIR__ . '/..' . '/clue/stream-filter/src',
         ),
-        'Cloudflare\\API\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/cloudflare/sdk/src',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'o' => 
-        array (
-            'okw\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/okwinza/cloudflare-api',
-            ),
-        ),
     );
 
     public static $classMap = array (
@@ -192,7 +177,6 @@ class ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b::$classMap;
 
         }, null, ClassLoader::class);

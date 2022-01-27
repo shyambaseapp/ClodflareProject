@@ -8,8 +8,8 @@ class ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '9c67151ae59aff4788964ce8eb2a0f43' => __DIR__ . '/..' . '/clue/stream-filter/src/functions_include.php',
         '0d59ee240a4cd96ddbb4ff164fccea4d' => __DIR__ . '/..' . '/symfony/polyfill-php73/bootstrap.php',
         '8cff32064859f4559445b89279f3199c' => __DIR__ . '/..' . '/php-http/message/src/filters.php',
@@ -18,6 +18,10 @@ class ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b
     );
 
     public static $prefixLengthsPsr4 = array (
+        'W' => 
+        array (
+            'Wappr\\Cloudflare\\' => 17,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
@@ -51,6 +55,7 @@ class ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
+            'GraphQL\\' => 8,
             'Github\\' => 7,
         ),
         'C' => 
@@ -60,6 +65,10 @@ class ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b
     );
 
     public static $prefixDirsPsr4 = array (
+        'Wappr\\Cloudflare\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/wappr/cloudflare-graphql/src',
+        ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
@@ -138,9 +147,13 @@ class ComposerStaticInitb6703c6334e8be2cdd66633304f29b3b
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
+        'GraphQL\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/gmostafa/php-graphql-client/src',
+        ),
         'Github\\' => 
         array (
-            0 => __DIR__ . '/..' . '/knplabs/github-api/lib/Github',
+            0 => __DIR__ . '/../..' . '/knplabs/github-api/lib/Github',
         ),
         'Clue\\StreamFilter\\' => 
         array (

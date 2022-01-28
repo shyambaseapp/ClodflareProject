@@ -141,7 +141,7 @@ class CloudFlare
      }
 
      /**
-      * Analyse cloudflare domain .
+      * Analyze cloudflare domain .
       *
       * @return object|true
       */

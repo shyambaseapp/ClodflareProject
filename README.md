@@ -7,7 +7,7 @@
 > 3. To create a cloudflare static page project on cloudflare account.
 > 4. To deploy cloudflare static pages projects .
 > 5. To add domains on cloudflare accounts.
-> 6. To analyse the all function of zones/domains.
+> 6. To analyze the all function of zones/domains.
 
 ## Requirements :
 

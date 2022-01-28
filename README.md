@@ -44,35 +44,35 @@
 
 ## Example :
 
-### <?php
+ ```<?php
 
-### use DevCoder\DotEnv;
-### require_once __DIR__ . '/envClass.php';
-### require_once __DIR__ . '/cloudflareApiClass.php';
-### require_once __DIR__ . '/githubApiClass.php';
-### (new DotEnv(__DIR__ . '/.env'))->load();
+ use DevCoder\DotEnv;
+ require_once __DIR__ . '/envClass.php';
+ require_once __DIR__ . '/cloudflareApiClass.php';
+ require_once __DIR__ . '/githubApiClass.php';
+ (new DotEnv(__DIR__ . '/.env'))->load();
 
-### $githubOwner = getenv('githubOwner');
-### $gitAuthKey = getenv('gitAuthKey');
-### $path = getenv('path');
-### $repoName = getenv('repoName');
-### $repoBranch = getenv('repoBranch');
-### $gitComment = getenv('gitComment');
-### $accountId = getenv('accountId');
-### $xAuthEmail = getenv('xAuthEmail');
-### $xAuthKey = getenv('xAuthKey');
-### $projectName = getenv('projectName');
-### $domain = getenv('domain');
-### $zoneId = getenv('zoneId');
-### $date = getenv('date');
+ $githubOwner = getenv('githubOwner');
+ $gitAuthKey = getenv('gitAuthKey');
+ $path = getenv('path');
+ $repoName = getenv('repoName');
+ $repoBranch = getenv('repoBranch');
+ $gitComment = getenv('gitComment');
+ $accountId = getenv('accountId');
+ $xAuthEmail = getenv('xAuthEmail');
+ $xAuthKey = getenv('xAuthKey');
+ $projectName = getenv('projectName');
+ $domain = getenv('domain');
+ $zoneId = getenv('zoneId');
+ $date = getenv('date');
 
-### $gh = new Github($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment);
-### $cf = new CloudFlare($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment, $xAuthEmail, $xAuthKey, $domain, $accountId, $projectName);
-### $gh->gitCreateRepo();
-### $gh->gitRepoPushCode($path);
-### $cf->createCloudFlarePages();
-### $cf->deployCloudFlarePages();
-### $cf->addCloudFlareDomain();
-### $cf->zoneAnalytics($zoneId, $limit, $date);
+ $gh = new Github($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment);
+ $cf = new CloudFlare($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment, $xAuthEmail, $xAuthKey, $domain, $accountId, $projectName);
+ $gh->gitCreateRepo();
+ $gh->gitRepoPushCode($path);
+ $cf->createCloudFlarePages();
+ $cf->deployCloudFlarePages();
+ $cf->addCloudFlareDomain();
+ $cf->zoneAnalytics($zoneId, $limit, $date);
 
-### ?>
+ ?>```

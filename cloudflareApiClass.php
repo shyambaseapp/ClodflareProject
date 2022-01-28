@@ -178,7 +178,7 @@ class CloudFlare
                     }
                }
                $result = (object) array_merge((array) $result1, (array) $result2, (array) $result3, (array) $result4);
-               return "Analysis Completed";
+               return $result;
           } catch (Exception $e) {
                $error = 'Message: ' . $e->getMessage();
                return $error;

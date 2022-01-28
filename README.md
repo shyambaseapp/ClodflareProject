@@ -1,19 +1,78 @@
-# ClodflareProject
+# PHP CloudflareProject Library
 
-## Provide all basic variable details which is given below:
+## The PHP cloudflare library will used to create the following using cloudflare API :
 
-$github_owner = 'xyz';                                // github username
-$git_auth_key =  'abcddghd45646';                     //github authenication_key
-$path = '/home/xyz/Documents/WFH/alpha-master/';      // Path of the project who will be deployed.
-$repo_name = 'alpha';
-$repo_branch = 'master';
-$git_comment = 'first';
-$account_id = '8114ba045157bde928';      //cloudflare account_id
-$X_Auth_Email = 'shyam.xyz@gmail.com';             //cloudflare account email id.
-$X_Auth_Key = '44f3e5d3f277d7c73ccd4ea64c'; //cloudflare global api key.
-$project_name = 'betaalpha';                           //project name to create on cloudflare pages.
+### 1. To create github repository.
+### 2. To push static site project on github repositories.
+### 3. To create a cloudflare static page project on cloudflare account.
+### 4. To deploy cloudflare static pages projects .
+### 5. To add domains on cloudflare accounts.
+### 6. To analyse the all function of zones/domains.
+
+## Requirements :
+
+### * PHP 7.2 or newer
+
+## Installation :
+
+### git clone https://github.com/shyambaseapp/ClodflareProject.git
+
+## Create .env file :
+
+### Create .env file on project root directory.
+
+### githubOwner = ownerName
+### gitAuthKey  = ghp_UKCafhaifghafgk4byuTP4Cs
+### path        = PathToStaticSite
+### repoName    = alpha
+### repoBranch  = master
+### gitComment  = comments
+### accountId   = 343d45646sd5646a5s4d54da6sd46
+### xAuthEmail  = example@gmail.com
+### xAuthKey    = 56465sa4fsaf564asf654fas645afa
+### projectName = xyz
+### domain      = xyz.com
+### zoneId      = 54gawe4g4w6eg4654rewg4654564rg65
+### date        = 2022-01-04                       
 
 
-## Importent to Know:
-1. store credentials to Git Credential Storage fallow the given link:
-     https://help.github.com/articles/caching-your-github-password-in-git/
+##  Store git credential on local computer :
+###  1. store credentials to Git Credential Storage fallow the given link:
+
+###   *  https://help.github.com/articles/caching-your-github-password-in-git/
+
+
+## Example :
+
+### <?php
+
+### use DevCoder\DotEnv;
+### require_once __DIR__ . '/envClass.php';
+### require_once __DIR__ . '/cloudflareApiClass.php';
+### require_once __DIR__ . '/githubApiClass.php';
+### (new DotEnv(__DIR__ . '/.env'))->load();
+
+### $githubOwner = getenv('githubOwner');
+### $gitAuthKey = getenv('gitAuthKey');
+### $path = getenv('path');
+### $repoName = getenv('repoName');
+### $repoBranch = getenv('repoBranch');
+### $gitComment = getenv('gitComment');
+### $accountId = getenv('accountId');
+### $xAuthEmail = getenv('xAuthEmail');
+### $xAuthKey = getenv('xAuthKey');
+### $projectName = getenv('projectName');
+### $domain = getenv('domain');
+### $zoneId = getenv('zoneId');
+### $date = getenv('date');
+
+### $gh = new Github($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment);
+### $cf = new CloudFlare($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment, $xAuthEmail, $xAuthKey, $domain, $accountId, $projectName);
+### $gh->gitCreateRepo();
+### $gh->gitRepoPushCode($path);
+### $cf->createCloudFlarePages();
+### $cf->deployCloudFlarePages();
+### $cf->addCloudFlareDomain();
+### $cf->zoneAnalytics($zoneId, $limit, $date);
+
+### ?>

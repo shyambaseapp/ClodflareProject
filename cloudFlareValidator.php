@@ -63,5 +63,5 @@ echo $res;
 echo "\r\n";
 
 $res = $cf->zoneAnalytics($zoneId, $limit, $date);
-echo $res;
+print_r($res);
 echo "\r\n";

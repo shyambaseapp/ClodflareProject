@@ -2,20 +2,20 @@
 
 ## The PHP cloudflare library will used to create the following using cloudflare API :
 
-### 1. To create github repository.
-### 2. To push static site project on github repositories.
-### 3. To create a cloudflare static page project on cloudflare account.
-### 4. To deploy cloudflare static pages projects .
-### 5. To add domains on cloudflare accounts.
-### 6. To analyse the all function of zones/domains.
+> 1. To create github repository.
+> 2. To push static site project on github repositories.
+> 3. To create a cloudflare static page project on cloudflare account.
+> 4. To deploy cloudflare static pages projects .
+> 5. To add domains on cloudflare accounts.
+> 6. To analyse the all function of zones/domains.
 
 ## Requirements :
 
-### * PHP 7.2 or newer
+> * PHP 7.2 or newer
 
 ## Installation :
 
-### git clone https://github.com/shyambaseapp/ClodflareProject.git
+> git clone https://github.com/shyambaseapp/ClodflareProject.git
 
 ## Create .env file :
 
@@ -77,4 +77,5 @@
  $cf->addCloudFlareDomain();
  $cf->zoneAnalytics($zoneId, $limit, $date);
 
- ?>```
+ ?>
+```

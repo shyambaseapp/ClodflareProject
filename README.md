@@ -21,20 +21,21 @@
 
 ### Create .env file on project root directory.
 
-### githubOwner = ownerName
-### gitAuthKey  = ghp_UKCafhaifghafgk4byuTP4Cs
-### path        = PathToStaticSite
-### repoName    = alpha
-### repoBranch  = master
-### gitComment  = comments
-### accountId   = 343d45646sd5646a5s4d54da6sd46
-### xAuthEmail  = example@gmail.com
-### xAuthKey    = 56465sa4fsaf564asf654fas645afa
-### projectName = xyz
-### domain      = xyz.com
-### zoneId      = 54gawe4g4w6eg4654rewg4654564rg65
-### date        = 2022-01-04                       
-
+```ruby
+ githubOwner = ownerName
+ gitAuthKey  = ghp_UKCafhaifghafgk4byuTP4Cs
+ path        = PathToStaticSite
+ repoName    = alpha
+ repoBranch  = master
+ gitComment  = comments
+ accountId   = 343d45646sd5646a5s4d54da6sd46
+ xAuthEmail  = example@gmail.com
+ xAuthKey    = 56465sa4fsaf564asf654fas645afa
+ projectName = xyz
+ domain      = xyz.com
+ zoneId      = 54gawe4g4w6eg4654rewg4654564rg65
+ date        = 2022-01-04                       
+```
 
 ##  Store git credential on local computer :
 ###  1. store credentials to Git Credential Storage fallow the given link:
@@ -44,7 +45,8 @@
 
 ## Example :
 
- ```<?php
+ ```ruby
+ <?php
 
  use DevCoder\DotEnv;
  require_once __DIR__ . '/envClass.php';

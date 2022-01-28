@@ -15,7 +15,9 @@
 
 ## Installation :
 
-> git clone https://github.com/shyambaseapp/ClodflareProject.git
+> Source code : git clone https://github.com/shyambaseapp/ClodflareProject.git
+> update composer to install all dependency/library.
+> command : composer update
 
 ## Create .env file :
 

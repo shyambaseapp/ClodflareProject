@@ -36,7 +36,9 @@
  projectName = xyz
  domain      = xyz.com
  zoneId      = 54gawe4g4w6eg4654rewg4654564rg65
- date        = 2022-01-04                       
+ date_gt = 2022-01-04
+ date_lt = 2022-01-21
+                      
 ```
 
 ##  Store git credential on local computer :
@@ -68,7 +70,8 @@
  $projectName = getenv('projectName');
  $domain = getenv('domain');
  $zoneId = getenv('zoneId');
- $date = getenv('date');
+ $date_gt = getenv('date_gt');
+ $date_lt = getenv('date_lt');
 
  $gh = new Github($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment);
  $cf = new CloudFlare($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment, $xAuthEmail, $xAuthKey, $domain, $accountId, $projectName);

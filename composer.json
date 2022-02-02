@@ -1,14 +1,9 @@
 {
     "require": {
         "guzzlehttp/guzzle": "^7.0",
-        "http-interop/http-factory-guzzle": "^1.0",
-        "lcobucci/jwt": "^4.1",
-        "czproject/git-php": "^4.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Wappr\\Cloudflare\\": "wappr/cloudflare-graphql/src/",
-            "Github\\": "knplabs/github-api/lib/Github/"
-        }
+        "czproject/git-php": "^4.0",
+        "knplabs/github-api":"^3.0",
+        "wappr/cloudflare-graphql": "^0.4.0"
     }
+   
 }

@@ -1,12 +1,12 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/extends/graphql-class/HttpRequests1dGroups.php';
+require_once __DIR__ . '/extends/graphql-class/HttpRequestsSum.php';
 
 use GuzzleHttp\Client;
 use Wappr\Cloudflare\AnalyticsClient;
-use Wappr\Cloudflare\DataSets\HttpRequests\HttpRequests1dGroups;
 use Wappr\Cloudflare\Resources\Zones;
-use Wappr\Cloudflare\SelectionSets\HttpRequests\HttpRequestsSum;
 use Wappr\Cloudflare\SelectionSets\HttpRequests\HttpRequestsAverage;
 use Wappr\Cloudflare\SelectionSets\HttpRequests\HttpRequestsUnique;
 use Wappr\Cloudflare\SelectionSets\HttpRequests\HttpRequestsDimensions;
@@ -145,16 +145,18 @@ class CloudFlare
       *
       * @return object|true
       */
-     function zoneAnalytics($zoneId, $limit, $date)
+     function zoneAnalytics($zoneId, $date_gt, $date_lt)
      {
           try {
-               $dataSetSum = new HttpRequestsSum();
+               $dataSetSum = new HttpRequestSum();
                $dataSetAverage = new HttpRequestsAverage();
                $dataSetUnique = new HttpRequestsUnique();
                $dataSetDimensions = new HttpRequestsDimensions();
                $dataSet = array($dataSetSum, $dataSetDimensions, $dataSetAverage, $dataSetUnique);
+
+
                foreach ($dataSet as $data) {
-                    $request = new HttpRequests1dGroups($data, new DateTime($date), 100);
+                    $request = new HttpRequests1dGroup($data, new DateTime($date_gt),new DateTime($date_lt), 100);
                     $client  = new AnalyticsClient($this->xAuthEmail, $this->xAuthKey);
                     $zone = new Zones($request, $zoneId);
                     $client->addResource($zone);
@@ -171,7 +173,7 @@ class CloudFlare
                               $result3 = $response->data->viewer->zones[0]->httpRequests1dGroups[0];
                               break;
                          case $dataSetDimensions:
-                              $result4 = $response->data->viewer->zones[0]->httpRequests1dGroups[0];
+                              $result4 = $response->data->viewer->zones[0];
                               break;
                          default:
                               echo "Invalid Conditions";

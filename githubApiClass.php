@@ -28,7 +28,7 @@ class Github
           try {
                $client = new \Github\Client();
                $repos = $client->api('user')->repositories($this->githubOwner);
-               $client->authenticate($this->githubOwner, $this->gitAuthKey, "CLIENT_ID");
+               $client->authenticate($this->githubOwner, $this->gitAuthKey, Github\AuthMethod::CLIENT_ID);
                $repo = $client->api('repo')->create($this->repoName, 'This is the description of a repo', true);
                return "repo created";
           } catch (Exception $e) {

@@ -18,8 +18,8 @@ $xAuthKey = getenv('xAuthKey');
 $projectName = getenv('projectName');
 $domain = getenv('domain');
 $zoneId = getenv('zoneId');
-$limit = getenv('limit');
-$date = getenv('date');
+$date_gt = getenv('date_gt');
+$date_lt = getenv('date_lt');
 
 $gh = new Github($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment);
 $cf = new CloudFlare($githubOwner, $gitAuthKey, $repoName, $repoBranch, $gitComment, $xAuthEmail, $xAuthKey, $domain, $accountId, $projectName);
@@ -42,7 +42,6 @@ echo $res . "\r\n";
 * Create peges on cloudflare pages... 
 */
 
-
 $res = $cf->createCloudFlarePages();
 echo $res . "\r\n";
 
@@ -62,6 +61,6 @@ $res = $cf->addCloudFlareDomain();
 echo $res;
 echo "\r\n";
 
-$res = $cf->zoneAnalytics($zoneId, $limit, $date);
+$res = $cf->zoneAnalytics($zoneId, $date_gt, $date_lt);
 print_r($res);
 echo "\r\n";

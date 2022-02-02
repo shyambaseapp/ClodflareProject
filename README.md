@@ -77,7 +77,7 @@
  $cf->createCloudFlarePages();
  $cf->deployCloudFlarePages();
  $cf->addCloudFlareDomain();
- $cf->zoneAnalytics($zoneId, $limit, $date);
+ $cf->zoneAnalytics($zoneId, $limit, $date_gt, $date_lt);
 
  ?>
 ```

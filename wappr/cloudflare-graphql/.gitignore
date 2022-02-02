@@ -1,9 +1,0 @@
-index.php
-composer.lock
-vendor
-coverage.xml
-*.cache
-build
-cache
-*.phar
-.DS_Store

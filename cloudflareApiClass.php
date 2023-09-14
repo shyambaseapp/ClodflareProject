@@ -43,7 +43,7 @@ class CloudFlare
                $url = "https://api.cloudflare.com/client/v4/accounts/$this->accountId/pages/projects";
                $data = array(
                     "name" => "$this->projectName",
-                    "id" => "7b162ea7-7367-4d67-bcde-1160995d5",
+                    "id" => "",
                     "created_on" => "2017-01-01T00=>00=>00Z",
                     "subdomain" => "$this->projectName.pages.dev",
                     "domains" => "[$this->domain]",
